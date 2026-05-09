@@ -1,8 +1,8 @@
 #!/bin/bash
 
-USERID = $(id -u)
+USERID=$(id -u)
 
-if [$USERID -ne 0]
+if [ $USERID -ne 0 ]
     then
         echo " ERROR:: Please run this script with root access "
         exit 1
@@ -12,11 +12,11 @@ fi
 
 dnf list installed mysql
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
     then
         echo " MySQL is not installed... going to install it "
         dnf install mysql -y
-        if [$? -ne 0]
+        if [ $? -ne 0]
             then
                 echo " MYSQL Insatallation is failure "
                 exit 1
