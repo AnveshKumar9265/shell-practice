@@ -1,8 +1,8 @@
 #!/bin/bash
 
-USERID = $(id -u)
+USERID=$(id -u)
 
-if [ USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
 	echo " ERROR:: Please run this script with root access "
 	exit 1
@@ -27,7 +27,6 @@ if [ $? -ne 0 ]
 		echo " MySQL is not installed... going to install it "
 		dnf install mysql -y
 		validate $? "MYSQL"
-		fi
 	else
 		echo " MySQL is already installed..."
 fi
@@ -39,7 +38,6 @@ if [ $? -ne 0 ]
 		echo " nginx is not installed... going to install it "
 		dnf install nginx -y
 		validate $? "nginx"
-		fi
 	else
 		echo " nginx is already installed..."
 fi
