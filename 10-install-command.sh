@@ -2,7 +2,7 @@
 
 USERID = $(id -u)
 
-if [$USERID -new 0]
+if [$USERID -ne 0]
     then
         echo " ERROR:: Please run this script with root access "
         exit 1
@@ -21,7 +21,7 @@ if [$? -ne 0]
                 echo " MYSQL Insatallation is failure "
                 exit 1
             else
-                echo " MYSQL Installation is succes
+                echo " MYSQL Installation is succes"
             fi
     else
         echo " MySQL is already installed..."
