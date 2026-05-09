@@ -5,6 +5,8 @@ Number2=$2
 
 Timestamp=$(date)
 
-echo " script executed at :: $Timestamp"
+echo " script executed at :: $Timestamp "
 
-echo "SUM of $Number1 and $Number2 is :: $(($Number1+$)) 
+SUM=$(($Number1))
+
+echo " SUM of $Number1 and $Number2 is :: $SUM "
